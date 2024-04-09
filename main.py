@@ -23,3 +23,11 @@ def createTable():
         con.commit()
 
 
+def task1():
+        cursor.execute("SELECT * FROM people LIMIT 6")
+        # Получаем результаты запроса
+        results = cursor.fetchall()
+        for el in results:
+                print(*el)
+
+task1()
